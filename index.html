@@ -8,20 +8,51 @@
     <title>CSS GRID</title>
 </head>
 <body>
-    <h1>CSS Grid Layout Home Page</h1><hr>
-    <a href="Lecture 1/index.html" target="_blank">Lecture 1</a>
-    <a href="Lecture 2/index.html" target="_blank">Lecture 2</a>
-    <a href="Lecture 3/index.html" target="_blank">Lecture 3</a>
-    <a href="Lecture 4/index.html" target="_blank">Lecture 4</a>
-    <a href="Lecture 5/index.html" target="_blank">Lecture 5</a>
-    <a href="Lecture 6/index.html" target="_blank">Lecture 6</a>
-    <a href="Lecture 7/index.html" target="_blank">Lecture 7</a>
-    <a href="Lecture 8/index.html" target="_blank">Lecture 8</a>
-    <a href="Lecture 9/index.html" target="_blank">Lecture 9</a>
-    <a href="Lecture 10/index.html" target="_blank">Lecture 10</a>
-    <a href="Lecture 11/index.html" target="_blank">Lecture 11</a>
-    <a href="Lecture 12/index.html" target="_blank">Lecture 12</a>
-    <a href="Lecture 13/index.html" target="_blank">Lecture 13</a>
-    <a href="Lecture 14/index.html" target="_blank">Lecture 14</a>
+    <header>
+        <h1>CSS Grid Layout Home Page</h1><hr>
+    </header>
+
+    <section>
+        <div class="lecture"><a href="Lecture 1/index.html" target="_blank">Lecture 1</a></div>
+        <div class="lecture"><a href="Lecture 2/index.html" target="_blank">Lecture 2</a></div>
+        <div class="lecture"><a href="Lecture 3/index.html" target="_blank">Lecture 3</a></div>
+        <div class="lecture"><a href="Lecture 4/index.html" target="_blank">Lecture 4</a></div>
+        <div class="lecture"><a href="Lecture 5/index.html" target="_blank">Lecture 5</a></div>
+        <div class="lecture"><a href="Lecture 6/index.html" target="_blank">Lecture 6</a></div>
+        <div class="lecture"><a href="Lecture 7/index.html" target="_blank">Lecture 7</a></div>
+        <div class="lecture"><a href="Lecture 8/index.html" target="_blank">Lecture 8</a></div>
+        <div class="lecture"><a href="Lecture 9/index.html" target="_blank">Lecture 9</a></div>
+        <div class="lecture"><a href="Lecture 10/index.html" target="_blank">Lecture 10</a></div>
+        <div class="lecture"><a href="Lecture 11/index.html" target="_blank">Lecture 11</a></div>
+        <div class="lecture"><a href="Lecture 12/index.html" target="_blank">Lecture 12</a></div>
+        <div class="lecture"><a href="Lecture 13/index.html" target="_blank">Lecture 13</a></div>
+        <div class="lecture"><a href="Lecture 14/index.html" target="_blank">Lecture 14</a></div>
+    </section>
+
+    <style>
+        body{
+            display: grid;
+            grid-template-areas:
+                "header header header"
+                "content content content"
+        }
+
+        header{
+            grid-area: header;
+        }
+
+        section{
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-area: content;
+        }
+        
+        .lecture{
+            display: grid;
+            grid-gap: 20px;
+            margin: 10px 0;
+            
+        }
+    </style>
 </body>
 </html>
